@@ -1,0 +1,541 @@
+/* Layout general */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf6f0; /* pastel muy suave */
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex: 1;
+    padding: 50px;
+    background-color: #fff8f0; /* contraste suave */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
+}
+
+.contenido-principal h2, .contenido-principal h3, .contenido-principal h4 {
+    color: #6b4c3b;
+}
+
+.contenido-principal h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.contenido-principal h3 {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+.contenido-principal h4 {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.contenido-principal p, .contenido-principal ul {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.contenido-principal ul {
+    padding-left: 20px;
+}
+
+/* Menú lateral a la derecha */
+.menu-lateral {
+    width: 220px;
+    background-color: #ffd6c2; /* pastel suave */
+    color: #4a3c31;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título del menú */
+.menu-lateral h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+/* Botones de minijuegos */
+.menu-juegos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu-juegos a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.1em;
+    background-color: #ffe0d6; /* pastel más claro */
+    color: #4a3c31;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-juegos a:hover {
+    background-color: #ffbfa3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+/* Fondo general y contenedor */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf6f0; /* pastel muy suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.semaforo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff8f5; /* fondo suave del juego */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 700px;
+    width: 90%;
+}
+
+/* Títulos */
+h2 {
+    color: #6b4c3b;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Situación y mensaje */
+.situacion-texto {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4a3c31;
+}
+
+.mensaje-texto {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #6b4c3b;
+}
+
+.puntaje-texto {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #4a3c31;
+}
+
+/* Semáforo centrado */
+.semaforo {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.semaforo button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.semaforo button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.rojo { background-color: #ff6b6b; }
+.amarillo { background-color: #ffd93d; }
+.verde { background-color: #6bcB77; }
+
+/* Botón siguiente */
+.btn-siguiente {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ffe0d6;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #4a3c31;
+    transition: all 0.3s ease;
+}
+
+.btn-siguiente:hover {
+    background-color: #ffbfa3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Link regresar */
+.regresar {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4a3c31;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.regresar:hover {
+    color: #ff6b6b;
+}
+
+/* Leyenda */
+.leyenda {
+    width: 100%;
+    background: #fef3e6; /* pastel suave */
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.leyenda h3 {
+    margin-bottom: 10px;
+    color: #6b4c3b;
+}
+
+.leyenda ul {
+    list-style: none;
+    padding: 0;
+}
+
+.leyenda li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #4a3c31;
+}
+
+
+/* Contenedor principal */
+.sopa-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff8f5; /* pastel suave */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Títulos */
+h2 {
+    color: #6b4c3b;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #6b4c3b;
+    margin-bottom: 10px;
+}
+
+/* Panel tiempo/puntaje */
+.panel {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #4a3c31;
+}
+
+/* Tabla de sopa de letras */
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td.celda {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d8bfae;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    user-select: none;
+    color: #4a3c31;
+}
+
+td.celda:hover {
+    background-color: #ffe0d6;
+}
+
+td.celda.temp {
+    background-color: #ffe27a;
+}
+
+td.celda.correcta {
+    background-color: #b7f0b4;
+    color: #023000;
+}
+
+/* Lista de palabras */
+.lista-palabras {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4a3c31;
+    text-align: left;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista-palabras li {
+    margin: 6px 0;
+}
+
+/* Botón regresar */
+.btn-regresar {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ffe0d6;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #4a3c31;
+    transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #ffbfa3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+
+.crucigrama {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.crucigrama td {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    background-color: #fff;
+}
+
+.crucigrama td.noCaja {
+    background-color: #333;
+}
+
+.crucigrama input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.numero {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    font-size: 12px;
+    color: #555;
+}
+
+.correcto input {
+    background-color: #90ee90;
+    font-weight: bold;
+}
+
+.definiciones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.instrucciones {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.puntaje {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Contenedor general */
+.rompecabezas-container {
+  text-align: center;
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #fff5f0; /* pastel suave */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Títulos */
+h2 {
+  color: #6b4c3b;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #4a3c31;
+  font-size: 1.1em;
+}
+
+/* Botones */
+.botones {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-accion {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffe0d6;
+  color: #4a3c31;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-accion:hover {
+  background-color: #ffbfa3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Puzzle */
+#puzzle {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 20px auto;
+  border: 2px solid #d8bfae;
+  border-radius: 15px;
+  background-color: #fff8f5;
+}
+
+/* Piezas */
+.pieza {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 1px solid #d8bfae;
+  border-radius: 6px;
+  background-image: url('../img/imagen.png');
+  background-size: 300px 300px;
+  cursor: pointer;
+  transition: top 0.2s, left 0.2s;
+}
+
+.pieza:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Pieza vacía */
+.vacia {
+  background: none;
+  border: 1px dashed #d8bfae;
+}
+
+/* Mensaje */
+.mensaje {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #0a8f0a;
+  font-weight: bold;
+}
+
+/* Contenedor login */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #fff8f5; /* pastel suave */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Título */
+.login-container h1 {
+    color: #6b4c3b;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Texto descriptivo */
+.login-container p {
+    color: #4a3c31;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+/* Input */
+.login-container input[type="text"] {
+    width: 80%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #d8bfae;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-container input[type="text"]:focus {
+    border-color: #ffbfa3;
+    box-shadow: 0 0 10px rgba(255,191,163,0.3);
+}
+
+/* Botón */
+.login-container button {
+    width: 50%;
+    padding: 12px 0;
+    background-color: #ffe0d6;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    color: #4a3c31;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.login-container button:hover {
+    background-color: #ffbfa3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}

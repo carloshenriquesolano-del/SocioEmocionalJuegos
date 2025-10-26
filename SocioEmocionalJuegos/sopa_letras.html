@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sopa de Letras Socioemocional</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="sopa-container">
+    <h2>Sopa de Letras Socioemocional</h2>
+    <p>Selecciona las letras para formar las palabras correctas</p>
+
+    <div class="panel">
+        <p><strong>Tiempo:</strong> <span id="tiempo">45</span> s</p>
+        <p><strong>Puntuación:</strong> <span id="puntaje">0</span></p>
+    </div>
+
+    <table id="sopa"></table>
+
+    <div id="palabras" class="lista-palabras">
+        <h3>Palabras a encontrar:</h3>
+        <ul id="listaPalabras"></ul>
+    </div>
+
+    <button class="btn-regresar" onclick="window.location.href='inicio.html'">Regresar al inicio</button>
+</div>
+
+<script>
+const grid = [
+    "EMPATHIARESPEC",
+    "OMNTRSDGJKLÑLA",
+    "MIAMISTADQWERT",
+    "AUTOCONTROLXYZ",
+    "HJKLÑQWERTYUOP",
+    "RESILIENCIAABC",
+    "NBCOMUNICACION",
+    "LASDKFJGHSKDJF",
+    "POIUYTREWQMNVB",
+    "ZXCVBNMLKJHGFD"
+];
+
+const palabras = [
+    { texto: "EMPATIA", puntos: 10 },
+    { texto: "RESPETO", puntos: 10 },
+    { texto: "AMISTAD", puntos: 20 },
+    { texto: "AUTOCONTROL", puntos: 20 },
+    { texto: "RESILIENCIA", puntos: 30 },
+    { texto: "COMUNICACION", puntos: 30 }
+];
+
+const sopa = document.getElementById("sopa");
+const listaPalabras = document.getElementById("listaPalabras");
+const tiempoTexto = document.getElementById("tiempo");
+const puntajeTexto = document.getElementById("puntaje");
+
+let puntaje = 0;
+let seleccion = "";
+
+palabras.forEach(p => {
+    const li = document.createElement("li");
+    li.textContent = `${p.texto} (+${p.puntos})`;
+    li.id = p.texto;
+    listaPalabras.appendChild(li);
+});
+
+grid.forEach((fila, i) => {
+    const tr = document.createElement("tr");
+    for (let j = 0; j < fila.length; j++) {
+        const td = document.createElement("td");
+        td.textContent = fila[j];
+        td.dataset.row = i;
+        td.dataset.col = j;
+        td.classList.add("celda");
+        td.addEventListener("click", seleccionarLetra);
+        tr.appendChild(td);
+    }
+    sopa.appendChild(tr);
+});
+
+function seleccionarLetra(event) {
+    const celda = event.target;
+    celda.classList.toggle("temp");
+    seleccion = Array.from(document.querySelectorAll("td.temp"))
+        .map(c => c.textContent)
+        .join("");
+    verificarPalabra();
+}
+
+function verificarPalabra() {
+    for (const p of palabras) {
+        if (seleccion === p.texto) {
+            puntaje += p.puntos;
+            puntajeTexto.textContent = puntaje;
+
+            document.querySelectorAll("td.temp").forEach(c => {
+                c.classList.add("correcta");
+                c.classList.remove("temp");
+                c.removeEventListener("click", seleccionarLetra);
+            });
+
+            document.getElementById(p.texto).style.textDecoration = "line-through";
+            seleccion = "";
+        }
+    }
+}
+
+// Cronómetro
+let tiempo = 45;
+const intervalo = setInterval(() => {
+    tiempo--;
+    tiempoTexto.textContent = tiempo;
+
+    if (tiempo <= 0) {
+        clearInterval(intervalo);
+        alert("Se acabó el tiempo. Tu puntaje: " + puntaje);
+    }
+}, 1000);
+</script>
+
+</body>
+</html>

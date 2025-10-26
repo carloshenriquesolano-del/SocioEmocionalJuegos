@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Semáforo Socioemocional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="semaforo-container">
+        <h2>Semáforo Socioemocional</h2>
+
+        <div class="zona-juego">
+            <p id="situacion" class="situacion-texto"></p>
+
+            <div class="semaforo">
+                <button class="rojo" onclick="seleccionar('rojo')"></button>
+                <button class="amarillo" onclick="seleccionar('amarillo')"></button>
+                <button class="verde" onclick="seleccionar('verde')"></button>
+            </div>
+
+            <p id="mensaje" class="mensaje-texto"></p>
+            <p class="puntaje-texto">Puntaje: <span id="puntaje">0</span></p>
+
+            <button id="btn-siguiente" onclick="siguiente()" class="btn-siguiente">Siguiente</button>
+
+            <a href="inicio.html" class="regresar">← Regresar al inicio</a>
+        </div>
+
+        <div class="leyenda">
+            <h3>¿Qué significa cada color?</h3>
+            <ul>
+                <li><strong>🟥 Rojo:</strong> Enojo o impulso. Pausar y respirar antes de actuar.</li>
+                <li><strong>🟨 Amarillo:</strong> Duda o confusión. Pensar y analizar la situación.</li>
+                <li><strong>🟩 Verde:</strong> Calma y seguridad. Puedes actuar responsablemente.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/semaforo.js"></script>
+</body>
+</html>
